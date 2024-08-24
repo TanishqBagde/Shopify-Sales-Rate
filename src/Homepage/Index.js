@@ -6,7 +6,6 @@ import NumberOfRepeat from '../Components/NumberOfRepeat';
 import NewCustomers from '../Components/NewCustomers';
 import GeographicalDistribution from '../Components/GeographicalDistribution';
 import CustomerLifetimeValue from '../Components/CustomerLifetime';
-import Dashboard from '../Components/Dashboard';
 
 const Homepage = () => {
   const [activeComponent, setActiveComponent] = useState(<TotalSales />);
