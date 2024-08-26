@@ -7,11 +7,12 @@ ChartJS.register(LineElement, CategoryScale, LinearScale, Title, Tooltip, Legend
 const TotalSalesOverTime = () => {
     const [chartData, setChartData] = useState(null);
     const [timeFrame, setTimeFrame] = useState('monthly'); 
+    var baseUrl = process.env.SERVER_BASE_URL;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3002/api/sales-over-time?timeFrame=${timeFrame}`);
+                const response = await fetch(`${baseUrl}sales-over-time?timeFrame=${timeFrame}`);
                 const data = await response.json();
                 const labels = data.map(item => item._id); 
                 const dataset = {

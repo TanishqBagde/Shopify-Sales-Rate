@@ -7,11 +7,12 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend)
 const GeographicalDistribution = () => {
     const [chartData, setChartData] = useState(null);
     const [timeFrame, setTimeFrame] = useState('monthly'); 
+    var baseUrl = process.env.SERVER_BASE_URL;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3002/api/geographical-distribution?timeFrame=${timeFrame}`);
+                const response = await fetch(`${baseUrl}geographical-distribution?timeFrame=${timeFrame}`);
                 const data = await response.json();
 
                

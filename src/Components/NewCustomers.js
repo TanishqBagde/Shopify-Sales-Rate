@@ -7,11 +7,12 @@ ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Title, T
 const NewCustomers = () => {
     const [chartData, setChartData] = useState(null);
     const [timeFrame, setTimeFrame] = useState('monthly'); 
+    var baseUrl = process.env.SERVER_BASE_URL;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3002/api/new-customers-over-time?timeFrame=${timeFrame}`);
+                const response = await fetch(`${baseUrl}new-customers-over-time?timeFrame=${timeFrame}`);
                 const data = await response.json();
                 console.log(data);
                 const labels = data.map(item => item._id); 
