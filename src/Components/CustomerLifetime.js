@@ -29,7 +29,7 @@ const CustomerLifetimeValue = () => {
         };
 
         fetchData();
-    }, [timeFrame]); // Refetching the data when time frame changes
+    }, [timeFrame,baseUrl]); // Refetching the data when time frame changes
 
     const handleTimeFrameChange = (event) => {
         setTimeFrame(event.target.value);

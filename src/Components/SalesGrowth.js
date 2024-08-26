@@ -28,7 +28,7 @@ const SalesGrowthRate = () => {
         };
 
         fetchData();
-    }, [timeFrame]); 
+    }, [timeFrame,baseUrl]); 
 
     const handleTimeFrameChange = (event) => {
         setTimeFrame(event.target.value);

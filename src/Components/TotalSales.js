@@ -28,7 +28,7 @@ const TotalSalesOverTime = () => {
         };
 
         fetchData();
-    }, [timeFrame]); 
+    }, [timeFrame,baseUrl]); 
 
     const handleTimeFrameChange = (event) => {
         setTimeFrame(event.target.value);
