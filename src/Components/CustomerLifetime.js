@@ -7,7 +7,7 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend)
 const CustomerLifetimeValue = () => {
     const [chartData, setChartData] = useState(null);
     const [timeFrame, setTimeFrame] = useState('monthly'); //Monthly is being set for default 
-    var baseUrl = process.env.SERVER_BASE_URL;
+    var baseUrl = 'https://shopify-sales-rate-api.onrender.com/api/';
     useEffect(() => {
         const fetchData = async () => {
             try {

@@ -7,7 +7,7 @@ ChartJS.register(LineElement, CategoryScale, LinearScale, Title, Tooltip, Legend
 const SalesGrowthRate = () => {
     const [chartData, setChartData] = useState(null);
     const [timeFrame, setTimeFrame] = useState('monthly'); 
-    var baseUrl = process.env.SERVER_BASE_URL;
+    var baseUrl = 'https://shopify-sales-rate-api.onrender.com/api/';
 
     useEffect(() => {
         const fetchData = async () => {
